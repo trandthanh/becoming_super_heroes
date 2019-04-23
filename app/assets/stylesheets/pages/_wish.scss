@@ -1,0 +1,19 @@
+.new-wish-left {
+  float: left;
+  width: calc(100% - 544px);
+  overflow: auto;
+  height: calc(100vh - 80px);
+}
+
+.new-wish-right {
+  width: 544px;
+  background-color: white;
+  overflow: auto;
+  height: calc(100vh - 80px);
+
+  .form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
