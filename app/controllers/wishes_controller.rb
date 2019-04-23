@@ -47,7 +47,6 @@ class WishesController < ApplicationController
 
   def wish_params
     params.require(:wish).permit(:user)
-
   end
 
 end

@@ -7,6 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 
 puts 'Cleaning database...'
+Track.destroy_all
+Wish.destroy_all
 Subject.destroy_all
 
 # SUBJECTS
@@ -24,6 +26,11 @@ subjects_attributes = [
     description: "Art & Thérapie"
   },
   {
+    category: 'Tête',
+    name: 'Musique',
+    description: "Chant, Guitare, Piano : à vous de choisir !"
+  },
+  {
     category: 'Corps',
     name: 'Yoga',
     description: '...'
@@ -31,6 +38,16 @@ subjects_attributes = [
   {
     category: 'Corps',
     name: 'Zumba',
+    description: '...'
+  },
+  {
+    category: 'Corps',
+    name: 'Tai Chi Chuan',
+    description: '...'
+  },
+  {
+    category: 'Corps',
+    name: 'Dynamo',
     description: '...'
   }
 ]
