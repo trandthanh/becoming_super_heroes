@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_19_163152) do
+ActiveRecord::Schema.define(version: 2019_04_23_105229) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -114,7 +114,20 @@ ActiveRecord::Schema.define(version: 2019_04_19_163152) do
     t.datetime "remember_created_at"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "first_name"
+    t.string "last_name"
+    t.string "hospital"
+    t.string "phone"
+    t.string "zipcode"
+    t.bigint "mentor_id"
+    t.bigint "mentee_id"
+    t.integer "age"
+    t.string "hobby_head"
+    t.string "hobby_body"
+    t.string "sickness"
     t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["mentee_id"], name: "index_users_on_mentee_id"
+    t.index ["mentor_id"], name: "index_users_on_mentor_id"
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
@@ -137,5 +150,7 @@ ActiveRecord::Schema.define(version: 2019_04_19_163152) do
   add_foreign_key "talks", "teachers"
   add_foreign_key "tracks", "subjects"
   add_foreign_key "tracks", "wishes"
+  add_foreign_key "users", "mentees"
+  add_foreign_key "users", "mentors"
   add_foreign_key "wishes", "users"
 end

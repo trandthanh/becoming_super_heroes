@@ -15,7 +15,7 @@
 }
 
 .navbar-left {
-    width: 45%;
+    width: 40%;
 }
 
 
@@ -27,7 +27,7 @@
 
 
   .top-menu {
-      width: 544px;
+      width: 636px;
       height: 100%;
       margin: 0px;
       padding: 0;
@@ -52,12 +52,14 @@
 
     .navbar-second-btn {
       border: none;
-      background-color: #18288D;
+      background-color: $sunglow;
       width: 50%;
       padding: 19px;
 
+
+
       .nav-link-button-second {
-        background-color: #18288D;
+
         color: white;
         text-decoration: none;
         text-transform: uppercase;
@@ -66,13 +68,16 @@
         text-align: center;
 
       }
+
     }
 
   }
 
 }
 
-
+   .navbar-second-btn:hover {
+       background-color: $grey !important;
+    }
 
 
 
