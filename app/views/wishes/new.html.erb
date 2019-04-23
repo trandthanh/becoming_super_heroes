@@ -1,0 +1,28 @@
+<div class="new-wish d-flex justify-content-end">
+  <div class="new-wish-left">
+  </div>
+
+  <div class="new-wish-right p-4">
+    <h2>Choisissez les ingrédients de votre parcours :</h2>
+
+    <%= simple_form_for @wish do |f| %>
+      <h6>S'exprimer</h6>
+      <%= f.collection_check_boxes :track_ids, @head_subjects, :id, :name %>
+      <%#= f.association :tracks, as: :check_boxes, collection: @head_subjects, label_method: :name, value_method: :id %>
+
+      <h6>Reprendre possession de son corps</h6>
+      <%= f.association :tracks, as: :check_boxes, collection: @body_subjects, value_method: :id %>
+
+      <h6>Vos infos personnelles</h6>
+      <%= simple_fields_for :other do |o| %>
+        <%= o.input :first_name, as: :string, label: 'Prénom' %>
+        <%= o.input :last_name, as: :string, label: 'Nom' %>
+        <%= o.input :email, as: :string, label: 'Email' %>
+      <% end %>
+
+      <%= f.button :submit %>
+    <% end %>
+  </div>
+</div>
+
+
