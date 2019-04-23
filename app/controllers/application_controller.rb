@@ -11,13 +11,13 @@ class ApplicationController < ActionController::Base
 
       devise_parameter_sanitizer.permit(:sign_up, keys: [:first_name])
       devise_parameter_sanitizer.permit(:sign_up, keys: [:last_name])
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:phone])
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:age])
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:hospital])
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:sickness])
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:zipcode])
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:hobby_head])
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:hobby_body])
+      # devise_parameter_sanitizer.permit(:sign_up, keys: [:phone])
+      # devise_parameter_sanitizer.permit(:sign_up, keys: [:age])
+      # devise_parameter_sanitizer.permit(:sign_up, keys: [:hospital])
+      # devise_parameter_sanitizer.permit(:sign_up, keys: [:sickness])
+      # devise_parameter_sanitizer.permit(:sign_up, keys: [:zipcode])
+      # devise_parameter_sanitizer.permit(:sign_up, keys: [:hobby_head])
+      # devise_parameter_sanitizer.permit(:sign_up, keys: [:hobby_body])
     end
 end
 
