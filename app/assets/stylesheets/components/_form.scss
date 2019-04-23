@@ -1,0 +1,41 @@
+// FORM / Organiser son parcours
+
+.wish_tracks {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+
+.wish_track {
+  background: $sunglow;
+  padding: 20px;
+  border-radius: 5px;
+  opacity: .4;
+  flex: 0 0 30%;
+  text-align: center;
+  color: white;
+  &:hover {
+    opacity: 1;
+    cursor: pointer;
+  }
+  &.active {
+  background: $sunglow;
+  color: white;
+  opacity: 1;
+  }
+}
+
+.new-wish-form-others {
+  label {
+    color: $sunglow;
+    margin-bottom: 0;
+  }
+
+  input {
+    border: 0px;
+    border-radius: 0px;
+    border-bottom: 1px solid $pastel-gray;
+  }
+}
