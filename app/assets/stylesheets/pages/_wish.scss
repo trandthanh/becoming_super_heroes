@@ -1,8 +1,8 @@
 .new-wish-left {
   float: left;
-  width: calc(100% - 544px);
+  width: calc(100% - 636px);
   overflow: auto;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 63px);
   padding-top: 7%;
 
   p {
@@ -11,10 +11,10 @@
 }
 
 .new-wish-right {
-  width: 544px;
+  width: 636px;
   background-color: white;
   overflow: auto;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 63px);
 
   .form-control:focus {
     border-color: inherit;
