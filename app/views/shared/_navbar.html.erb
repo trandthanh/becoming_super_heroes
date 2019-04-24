@@ -19,11 +19,21 @@
     </div>
   </div>
 
-  <% unless user_signed_in? %>
+  <% if !user_signed_in? %>
     <div class="navbar-right">
       <div class="top-menu d-flex">
          <button class= "navbar-first-btn d-flex justify-content-center align-items-center"><%= link_to "Trouver un mentor", "#", class: "nav-link-button-first" %></button>
          <button class= "navbar-second-btn d-flex justify-content-center align-items-center"><%= link_to "Organiser mon parcours", new_wish_path, class: "nav-link-button-second" %></button>
+         <%= link_to destroy_user_session_path, method: :delete do %>
+          <%= image_tag "sign_in.svg", class: "sign_in" %>
+        <% end %>
+      </div>
+    </div>
+  <% elsif current_page?(new_wish_path) %>
+    <div class="navbar-right">
+      <div class="top-menu d-flex">
+         <button class= "navbar-first-btn d-flex justify-content-center align-items-center"><%= link_to "Trouver un mentor", "#", class: "nav-link-button-first" %></button>
+         <button class= "navbar-second-btn-active d-flex justify-content-center align-items-center"><%= link_to "Organiser mon parcours", new_wish_path, class: "nav-link-button-second" %></button>
          <%= link_to destroy_user_session_path, method: :delete do %>
           <%= image_tag "sign_in.svg", class: "sign_in" %>
         <% end %>
