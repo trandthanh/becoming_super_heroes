@@ -3,6 +3,11 @@
   width: calc(100% - 544px);
   overflow: auto;
   height: calc(100vh - 80px);
+  padding-top: 7%;
+
+  p {
+    margin-top: 7%;
+  }
 }
 
 .new-wish-right {
