@@ -1,3 +1,18 @@
 .indigodyeblue-text {
   color: $indigo-dye;
 }
+
+.color-white-with-hover-white {
+  color: white;
+  &:hover {
+    color: white;
+  }
+}
+
+.color-gray {
+  color: gray
+}
+
+.textdecoration-none {
+  text-decoration: none;
+}

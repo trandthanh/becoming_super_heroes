@@ -24,7 +24,7 @@
       <div class="top-menu d-flex">
          <button class= "navbar-first-btn d-flex justify-content-center align-items-center"><%= link_to "Trouver un mentor", "#", class: "nav-link-button-first" %></button>
          <button class= "navbar-second-btn d-flex justify-content-center align-items-center"><%= link_to "Organiser mon parcours", new_wish_path, class: "nav-link-button-second" %></button>
-         <%= link_to destroy_user_session_path, method: :delete do %>
+         <%= link_to new_user_session_path do %>
           <%= image_tag "sign_in.svg", class: "sign_in" %>
         <% end %>
       </div>
@@ -40,8 +40,14 @@
       </div>
     </div>
   <% else %>
-    <%= link_to new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" do %>
-       <%= image_tag "sign_in.svg", class: "sign_in" %>
+    <% if current_page?(admin_root_path) %>
+      <%= link_to(destroy_user_session_path, method: :delete) do %>
+        <p>Déconnexion</p>
+      <% end %>
+    <% else %>
+      <%= link_to new_user_session_path, class: "navbar-wagon-item navbar-wagon-link" do %>
+         <%= image_tag "sign_in.svg", class: "sign_in" %>
+      <% end %>
     <% end %>
   <% end %>
 </div>

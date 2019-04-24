@@ -1,0 +1,11 @@
+.clean-link {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.dashboard-card {
+    &:hover {
+      background-color: $light-gray;
+    }
+  }
