@@ -13,6 +13,34 @@ Subject.destroy_all
 
 # SUBJECTS
 
+puts 'Creating users ...'
+users_attributes = [
+  {
+    email: 'test1@gmail.com'
+    first_name: 'Macadamia 1',
+    last_name: 'Test 1',
+    zipcode: '75005'
+  },
+  {
+    email: 'test2@gmail.com',
+    first_name: 'Macadamia 2',
+    last_name: 'Test 2',
+    zipcode: '75007'
+  },
+  {
+    email: 'test3@gmail.com',
+    first_name: 'Macadamia 3',
+    last_name: 'Test 3',
+    zipcode: '92340'
+  },
+  {
+    email: 'admin@gmail.com',
+    admin: true
+  }
+]
+User.create!(users_attributes)
+puts 'Users created!'
+
 puts 'Creating subjects ...'
 subjects_attributes = [
   {

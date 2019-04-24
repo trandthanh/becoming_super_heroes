@@ -1,0 +1,11 @@
+.clean-link {
+  &:hover {
+    text-decoration: none;
+  }
+  .dashboard-content-wishes-card {
+    &:hover {
+      background-color: $light-gray;
+    }
+  }
+}
+

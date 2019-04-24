@@ -11,5 +11,10 @@ Rails.application.routes.draw do
   #   resources :wishes, only: [:create]
   # end
 
+  namespace :admin do
+    root to: "dashboards#index"
+    resources :wishes, only: [:show]
+  end
+
   root to: 'pages#home'
 end
