@@ -1,24 +1,12 @@
 <div class="new-wish">
   <div class="new-wish-left px-5">
-
-    <div class="" style="background: url(<%= asset_path 'sunglowblob.svg' %>); background-position: left; background-size: contain; background-repeat: no-repeat; padding: 50px 0;">
-      <h1 class="indigodyeblue-text">POURQUOI CHOISIR UN PARCOURS ?</h1>
-    </div>
-
-
-
-
-    <p>Nous pensons qu’il est indispensable de faire, d’être dans l’action pour se retrouver après la maladie.
-    Pas seulement faire du sport ou bouger mais également faire participer son esprit à des activités
-    d’expression de soi. C’est pourquoi, nous vous proposons un parcours pour aider à se reconstruire
-    après la maladie basé sur la complémentarité entre l’esprit (“head”), le corps (“body”), la confiance de soi
-    (“shooting photo”) et la connaissance de soi (“coaching personnel”).</p>
+    <%= render 'wishes/new/content' %>
   </div>
 
   <div class="new-wish-right p-4 pt-5">
     <h2>Choisissez les ingrédients de votre parcours :</h2>
     <div class="new-wish-form pt-5">
-      <%= render 'wishes/new/form' %>
+      <%= render 'wishes/new/form', head_subjects: @head_subjects, body_subjects: @body_subjects %>
     </div>
   </div>
 </div>

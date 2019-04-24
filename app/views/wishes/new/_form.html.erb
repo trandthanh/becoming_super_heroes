@@ -1,11 +1,11 @@
 <%= simple_form_for @wish do |f| %>
   <h4 class="indigodyeblue-text">S'exprimer</h4>
   <%#= f.collection_check_boxes :track_ids, @head_subjects, :id, :name %>
-  <%#= f.association :tracks, as: :check_boxes, collection: @head_subjects, label_method: :name, value_method: :id %>
+  <%#= f.association :tracks, as: :check_boxes, collection: @head_subjects, label_method: :name, value_method: :id, include_blank: false %>
   <fieldset class="form-group">
     <input type="hidden" name="wish[track_ids][]" value="">
     <div class="wish_tracks">
-      <% @head_subjects.each do |subject| %>
+      <% head_subjects.each do |subject| %>
           <input hidden type="checkbox" value="<%= subject.id %>" name="wish[track_ids][]" id="wish_track_ids_<%= subject.id %>">
           <label class="wish_track" for="wish_track_ids_<%= subject.id %>">
             <%= subject.name %>
@@ -19,7 +19,7 @@
   <fieldset class="form-group">
     <input type="hidden" name="wish[track_ids][]" value="">
     <div class="wish_tracks">
-      <% @body_subjects.each do |subject| %>
+      <% body_subjects.each do |subject| %>
           <input hidden type="checkbox" value="<%= subject.id %>" name="wish[track_ids][]" id="wish_track_ids_<%= subject.id %>">
           <label class="wish_track" for="wish_track_ids_<%= subject.id %>">
             <%= subject.name %>
@@ -55,5 +55,4 @@
   <div class="d-flex justify-content-center">
     <%= f.button :submit, 'ENVOYER', class: "btn btn-sunglow mt-5" %>
   </div>
-
 <% end %>
