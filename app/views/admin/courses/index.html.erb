@@ -1,0 +1,69 @@
+<div class="dashboard-admin d-flex">
+  <%= render 'admin/shared/sidenav' %>
+
+  <div class="dashboard-content col-sm-10 p-4 backgroundcolor-isabelline">
+    <h1>Cours & Classes / Overview</h1>
+
+    <div class="dashboard-admin-courses-index-active-classes mt-5 px-3 pt-3 backgroundcolor-white">
+      <h5 class="mb-3">CLASSES / OUVERTES</h5>
+
+    </div>
+
+    <div class="row mt-3 px-3 pt-3">
+      <div class="dashboard-admin-courses-index col p-4 mr-1 backgroundcolor-white">
+        <h5 class="mb-3">COURS / HEAD</h5>
+
+        <% @head_subjects.each do |subject| %>
+          <%= link_to admin_subject_path(subject), class: "clean-link" do %>
+            <div class="dashboard-card p-4 d-flex align-items-center justify-content-between">
+              <p class="m-0"><%= subject.name %></p>
+              <h5 class="">X classes</h5>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="dashboard-admin-courses-index col p-4 ml-1 backgroundcolor-white">
+        <h5 class="mb-3">COURS / CORPS</h5>
+
+        <% @body_subjects.each do |subject| %>
+          <%= link_to admin_subject_path(subject), class: "clean-link" do %>
+            <div class="dashboard-card p-4 d-flex align-items-center justify-content-between">
+              <p class="m-0"><%= subject.name %></p>
+              <h5 class="">X classes</h5>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="row mt-3 px-3">
+      <div class="dashboard-admin-courses-index col p-4 mr-1 backgroundcolor-white">
+        <h5 class="mb-3">COURS / CONFIANCE</h5>
+
+        <% @confidence_subjects.each do |subject| %>
+          <%= link_to admin_subject_path(subject), class: "clean-link" do %>
+            <div class="dashboard-card p-4 d-flex align-items-center justify-content-between">
+              <p class="m-0"><%= subject.name %></p>
+              <h5 class="">X classes</h5>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div class="dashboard-admin-courses col p-4 ml-1 backgroundcolor-white">
+        <h5 class="mb-3">COURS / COMPETENCES</h5>
+
+        <% @skills_subjects.each do |subject| %>
+          <%= link_to admin_subject_path(subject), class: "clean-link" do %>
+            <div class="dashboard-card p-4 d-flex align-items-center justify-content-between">
+              <p class="m-0"><%= subject.name %></p>
+              <h5 class="">X classes</h5>
+            </div>
+          <% end %>
+        <% end %>
+      </div>
+    </div>
+
+  </div>
+</div>

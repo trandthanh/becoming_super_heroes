@@ -2,8 +2,11 @@
   color: $indigo-dye;
 }
 
-.color-white {
+.color-white-with-hover-white {
   color: white;
+  &:hover {
+    color: white;
+  }
 }
 
 .color-gray {
