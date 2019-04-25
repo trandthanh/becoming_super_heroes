@@ -5,6 +5,9 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   # belongs_to :mentor
 
+  geocoded_by :zipcode
+  after_validation :geocode, if: :will_save_change_to_zipcode?
+
   belongs_to :mentee, optional: true
   belongs_to :mentor, optional: true
   has_many :wishes

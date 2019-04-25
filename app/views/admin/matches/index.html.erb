@@ -4,11 +4,29 @@
   <div class="dashboard-content col-sm-10 p-4 backgroundcolor-isabelline">
     <h1>Tous les matches !</h1>
 
-    <% if @matches.empty? %>
+    <h6>Mentees à matcher</h6>
+
+    <% if @new_mentees.empty? %>
+      <p>Pas de nouveaux mentees</p>
+    <% else %>
+      <% @new_mentees.each do |mentee| %>
+        <%= link_to admin_mentee_path(mentee) do %>
+          <%= mentee.user.email %>
+          /
+        <% end %>
+      <% end %>
+    <% end %>
+
+
+
+
+    <h6>Matches récents</h6>
+
+    <% if @recent_matches.empty? %>
       <p>Pas de matches</p>
     <% else %>
-      <% @matches.each do |match| %>
-        <% match.mentee.user.name %> / <%= match.mentor.user.name %>
+      <% @recent_matches.each do |match| %>
+        <% match.mentee.user.first_name %> / <%= match.mentor.user.first_name %>
       <% end %>
     <% end %>
   </div>
