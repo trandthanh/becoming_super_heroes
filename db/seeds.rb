@@ -16,7 +16,7 @@ Subject.destroy_all
 puts 'Creating users ...'
 users_attributes = [
   {
-    email: 'test1@gmail.com'
+    email: 'test1@gmail.com',
     first_name: 'Macadamia 1',
     last_name: 'Test 1',
     zipcode: '75005'
