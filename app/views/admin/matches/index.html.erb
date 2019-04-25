@@ -1,0 +1,15 @@
+<div class="dashboard-admin d-flex">
+  <%= render 'admin/shared/sidenav' %>
+
+  <div class="dashboard-content col-sm-10 p-4 backgroundcolor-isabelline">
+    <h1>Tous les matches !</h1>
+
+    <% if @matches.empty? %>
+      <p>Pas de matches</p>
+    <% else %>
+      <% @matches.each do |match| %>
+        <% match.mentee.user.name %> / <%= match.mentor.user.name %>
+      <% end %>
+    <% end %>
+  </div>
+</div>
