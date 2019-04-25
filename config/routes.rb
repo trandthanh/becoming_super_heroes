@@ -22,6 +22,7 @@ Rails.application.routes.draw do
     resources :subjects, only: [:show]
     resources :users, only: [:index]
     resources :matches, only: [:index]
+    resources :mentees, only: [:show]
   end
 
   root to: 'pages#home'
