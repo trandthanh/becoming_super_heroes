@@ -1,0 +1,24 @@
+.new-mentee-left {
+  float: left;
+  width: calc(100% - 636px);
+  overflow: auto;
+  height: calc(100vh - 63px);
+  padding-top: 7%;
+
+  p {
+    margin-top: 7%;
+  }
+}
+
+.new-mentee-right {
+  width: 636px;
+  background-color: white;
+  overflow: auto;
+  height: calc(100vh - 63px);
+
+  .form-control:focus {
+    border-color: inherit;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+}
