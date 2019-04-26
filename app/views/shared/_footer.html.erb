@@ -1,4 +1,4 @@
-<div class="footer p-5 paddingright-100px paddingleft-100px">
+<div class="footer p-5 paddingright-100px paddingleft-100px <%= current_page?(dashboard_user_path) ? 'backgroundcolor-grey' : '' %>">
   <div class="row">
     <div class="col">
       <%= image_tag "aktio-logo.png", class: "height-50px mb-4" %>
