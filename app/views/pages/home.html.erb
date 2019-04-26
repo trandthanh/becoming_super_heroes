@@ -1,2 +1,179 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="page-section p-4 paddingright-150px paddingleft-100px">
+  <div class="row mt-5">
+    <div class="col-6 d-flex flex-column justify-content-center">
+      <h1 class="mb-4">Apprendre de sa maladie</h1>
+      <p class="mb-5">Vous le savez mieux que quiconque, vous n'êtes pas que cette maladie. Mais vous ne pouvez probablement plus vivre sans oublié qu'elle a un jour existé. Comme un pouvoir qui vous est tombé dessus, ensemble, apprenez à le dompter.</p>
+      <%= link_to "QUE PROPOSONS-NOUS ?", root_path, class: "btn button-indigodye" %>
+    </div>
+    <div class="col-6 p-5 d-flex justify-content-center" style="background-image: url(<%= asset_path 'sunglowblob2.svg' %>); background-size: contain; background-position: top; background-repeat: no-repeat;">
+      <%= image_tag "03.png", class: "height-450px margintop-neg2pc" %>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="page-section p-4 paddingright-100px paddingleft-100px">
+  <h2 class="mb-5">L'accompagnement que nous proposons</h2>
+  <div class="row">
+    <div class="col">
+      <div class="height-100px mb-3" style="background-image: url(<%= asset_path 'sunglowblob.svg' %>); background-size: contain; background-position: left; background-repeat: no-repeat;">
+        <%= image_tag "10.png", class: "height-100px" %>
+      </div>
+      <div class="height-150px">
+        <h5>Le mentorat</h5>
+        <p>Partager pour s'en sortir, pour apprendre des autres et pour que les autres apprennent de soi.</p>
+      </div>
+      <%= link_to "En savoir +", root_path, class: "btn button-small-indigodye"  %>
+    </div>
+    <div class="col">
+      <div class="height-100px mb-3" style="background-image: url(<%= asset_path 'sunglowblob.svg' %>); background-size: contain; background-position: left; background-repeat: no-repeat;">
+        <%= image_tag "05.png", class: "height-100px" %>
+      </div>
+      <div class="height-150px">
+        <h5>Le parcours</h5>
+        <p>Se mettre dans l'action pour se relever, l'action de l'esprit et du corps, se réinventer, se recréer.</p>
+      </div>
+
+      <%= link_to "En savoir +", root_path, class: "btn button-small-indigodye"  %>
+    </div>
+    <div class="col">
+      <div class="height-100px mb-3" style="background-image: url(<%= asset_path 'sunglowblob.svg' %>); background-size: contain; background-position: left; background-repeat: no-repeat;">
+        <%= image_tag "08.png", class: "height-100px" %>
+      </div>
+      <div class="height-150px">
+        <h5>Le coaching</h5>
+        <p>Des séances avec des professionnels pour mieux se connaître.</p>
+      </div>
+
+      <%= link_to "En savoir +", root_path, class: "btn button-small-indigodye"  %>
+    </div>
+    <div class="col">
+      <div class="height-100px mb-3" style="background-image: url(<%= asset_path 'sunglowblob.svg' %>); background-size: contain; background-position: left; background-repeat: no-repeat;">
+        <%= image_tag "07.png", class: "height-100px" %>
+      </div>
+      <div class="height-150px">
+        <h5>Les conférences</h5>
+        <p>Venir écouter des histoires inspirantes, participer à des ateliers pour s'épanouir.</p>
+      </div>
+
+      <%= link_to "En savoir +", root_path, class: "btn button-small-indigodye"  %>
+    </div>
+    <div class="col">
+      <div class="height-100px mb-3" style="background-image: url(<%= asset_path 'sunglowblob.svg' %>); background-size: contain; background-position: left; background-repeat: no-repeat;">
+        <%= image_tag "11.png", class: "height-100px" %>
+      </div>
+      <div class="height-150px">
+        <h5>L'endroit</h5>
+        <p>Venir lire un livre, prendre un café, découvrir des gens, comme vous.</p>
+      </div>
+
+      <%= link_to "En savoir +", root_path, class: "btn button-small-indigodye"  %>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="page-section p-4 paddingright-100px paddingleft-100px margintop-150px">
+  <div class="row d-flex align-items-center">
+    <div class="col height-100vh" style="background-image: url(<%= asset_path 'onestory-placeholder.jpg' %>); background-size: cover; background-position: center;"></div>
+    <div class="col backgroundcolor-sunglow p-5 height-80vh marginleft-neg20px d-flex flex-column justify-content-center">
+      <h1 class="color-white mb-4">Chaque mois, nous mettons en avant votre histoire.</h1>
+
+      <h5 class="color-white mb-5">Ce mois-ci, Lola se prête au jeu. Elle raconte avec humour et recul sa rencontre avec la maladie. Ce que la maladie lui a apporté de plus précieux ? Un fashion statement : sans elle, elle n'aurait jamais su que la coupe rasée lui allait si bien. Elle ne la quitte plus !</h5>
+
+      <%= link_to "Lire sa story", root_path, class: "btn button-indigodye"  %>
+    </div>
+  </div>
+</div>
+
+<div class="page-section mt-5 p-4 paddingright-100px paddingleft-100px">
+  <h1 class="mb-5">Les histoires que nous aimons raconter</h1>
+  <div class="row">
+    <div class="col">
+      <div class="story-vertical-cards backgroundcolor-sunglow">
+        <div class="height-50vh" style="background-image: url(<%= asset_path 'meetstory-placeholder.jpg' %>); background-size: cover; background-position: center;"></div>
+        <div class="p-4">
+          <div class="height-35vh">
+            <h4 class="mb-4 color-white">Guillaume rencontre Samuel</h4>
+            <p class="mb-5 color-white">Deux inconnus qui se sont rencontrés avec AkTIO. Une passion commune, le baseball. A l'inverse de la maladie, une amitié qui est faite pour durer.</p>
+          </div>
+          <%= link_to "Lire leur story", root_path, class: "btn button-small-indigodye"  %>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="story-vertical-cards backgroundcolor-sunglow">
+        <div class="height-50vh" style="background-image: url(<%= asset_path 'trackheadstory-placeholder.jpg' %>); background-size: cover; background-position: center;"></div>
+        <div class="p-4">
+          <div class="height-35vh">
+            <h4 class="mb-4 color-white">Notre Yoga pour tous</h4>
+            <p class="mb-5 color-white">Du Yoga oui, mais personnalisé pour chacun en fonction des opérations et des traitements. Garder la forme, malgré les douleurs.</p>
+          </div>
+          <%= link_to "Lire leur story", root_path, class: "btn button-small-indigodye"  %>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="story-vertical-cards backgroundcolor-sunglow">
+        <div class="height-50vh" style="background-image: url(<%= asset_path 'trackbodystory-placeholder.jpg' %>); background-size: cover; background-position: center;"></div>
+        <div class="p-4">
+          <div class="height-35vh">
+            <h4 class="mb-4 color-white">Remplir sa page blanche</h4>
+            <p class="mb-5 color-white">Poser son vécu sur une page blanche, c'est sortir la maladie de son corps. Ecrire avant tout pour soi.</p>
+          </div>
+          <%= link_to "Lire leur story", root_path, class: "btn button-small-indigodye"  %>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="story-vertical-cards backgroundcolor-sunglow">
+        <div class="height-50vh" style="background-image: url(<%= asset_path 'talkstory-placeholder.jpg' %>); background-size: cover; background-position: center;"></div>
+        <div class="p-4">
+          <div class="height-35vh">
+            <h4 class="mb-4 color-white">Des histoires inspirantes</h4>
+            <p class="mb-5 color-white">Lorsque cette mannequin vient nous raconter son histoire, on dit oui !</p>
+          </div>
+          <%= link_to "Lire leur story", root_path, class: "btn button-small-indigodye"  %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="page-section mt-5 p-4 paddingright-100px paddingleft-100px margintop-150px backgroundcolor-white">
+  <div class="row my-5">
+    <div class="col">
+      <div class="comingsoon-fake-card p-5 mb-4 height-400px">
+        <div class="height-200px mb-3" style="background-image: url(<%= asset_path 'sunglowblob.svg' %>); background-size: contain; background-position: left; background-repeat: no-repeat;">
+          <%= image_tag "01.png", class: "height-200px" %> <h1>A vos agendas !</h1>
+        </div>
+      </div>
+      <div class="comingsoon-card backgroundcolor-lightgray p-5 height-400px">
+        <h5 class="color-indigodye">Lundi 16 Juin 2019 / 19h00 / 75011</h5>
+        <h3 class="color-sunglow mb-4">Conférence / Cancer & Fertilité par Dr. Febro</h3>
+        <p class="mb-5">Quels sont les mythes et les légendes autour de ce thème ? Le Dr. Febro de l'Institut Curie vient vous en parler. Venez avec vos questions !</p>
+        <%= link_to "S'inscrire (10 places restantes)", root_path, class: "btn button-small-indigodye"  %>
+      </div>
+    </div>
+    <div class="col">
+      <div class="comingsoon-card backgroundcolor-lightgray p-5 mb-4 height-400px">
+        <h5 class="color-indigodye">Mercredi 18 Juin 2019 / 10h00 / 75005</h5>
+        <h3 class="color-sunglow mb-4">Atelier / Comment cuisiner après le cancert ?</h3>
+        <p class="mb-5">On sait qu'il faut se convertir à une alimentation plus saine et équilibrée mais comment ? Le chef étoilé Pascal François vient vous montrer quelques astuces !</p>
+        <%= link_to "S'inscrire (20 places restantes)", root_path, class: "btn button-small-indigodye"  %>
+      </div>
+      <div class="comingsoon-card backgroundcolor-lightgray p-5 height-400px">
+        <h5 class="color-indigodye">Vendredi 20 Juin 2019 / 19h00 / 75011</h5>
+        <h3 class="color-sunglow mb-4">Afterwork / Vernissage #3 "Jaune & Bleu"</h3>
+        <p class="mb-5">Les élèves du cours de peinture vous livrent leurs tableaux ! Venez accompagnée.e.s et nombreux pour les soutenir ! Beuvrages & Snacks seront de la partie !</p>
+
+        <%= link_to "S'inscrire (30 places restantes)", root_path, class: "btn button-small-indigodye"  %>
+      </div>
+    </div>
+  </div>
+</div>
+

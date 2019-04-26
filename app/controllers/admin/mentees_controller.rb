@@ -13,6 +13,7 @@ class Admin::MenteesController < ApplicationController
     mentee_bodyhobby = @mentee.user.hobby_body
 
     near_users = User.near([@mentee.user.latitude, @mentee.user.longitude], 10)
+
     score_array = []
 
     near_users.each do |user|
