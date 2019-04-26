@@ -1,0 +1,27 @@
+<div class="dashboard-admin d-flex">
+  <%= render 'dashboards/sidenav/sidenav' %>
+
+  <div class="dashboard-content col-sm-10 p-4 backgroundcolor-isabelline">
+    <div class="row p-4">
+      <div class="col mr-2 backgroundcolor-white p-4">
+        <h2 class="mb-5">Votre parrain/marraine</h2>
+        <% if current_user.mentee.match.nil? %>
+          <%= link_to "+ Trouvez son mentor", new_mentee_path, class: "button-small-indigodye clean-link" %>
+        <% end %>
+      </div>
+      <div class="col ml-2 backgroundcolor-white p-4">
+        <h2>Votre fillot/filleul</h2>
+
+        <% if current_user.mentor.nil? %>
+          <p>Vous n'êtes pas encore mentor.</p>
+        <% elsif current_user.mentor.match.nil? %>
+          <p>Vous n'avez pas encore de fillot / filleul.</p>
+        <% else %>
+          <p>votre fillto est</p>
+        <% end %>
+
+      </div>
+    </div>
+
+  </div>
+</div>

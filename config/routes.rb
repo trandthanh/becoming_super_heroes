@@ -14,6 +14,8 @@ Rails.application.routes.draw do
   #   resources :wishes, only: [:create]
   # end
 
+  get '/dashboards', to: 'dashboards#index', as: :dashboard_user
+
   namespace :admin do
     root to: "dashboards#index"
     resources :wishes, only: [:index, :show]
