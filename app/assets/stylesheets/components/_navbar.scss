@@ -8,7 +8,7 @@
 }
 
 .navbar-lewagon .navbar-brand img {
-  height: 45px;
+  height: 50px;
   margin-right: 20px !important;
 }
 
@@ -29,12 +29,13 @@
 
     .navbar-first-btn {
       border: none;
-      background-color: #2653AF;
+      background-color: $indigo-dye;
       width: 50%;
       margin: 0;
+      padding: 19px;
 
       .nav-link-button-first {
-        background-color: #2653AF;
+        background-color: $indigo-dye;
         color: white;
         text-decoration: none;
         text-transform: uppercase;
@@ -44,7 +45,8 @@
       }
 
       &:hover {
-        opacity: 0.5;
+        margin-bottom: -8px;
+        transition: all 0.2s ease;
       }
     }
 
@@ -52,6 +54,7 @@
       border: none;
       background-color: $sunglow;
       width: 50%;
+      margin: 0;
       padding: 19px;
 
       .nav-link-button-second {
@@ -64,7 +67,8 @@
       }
 
       &:hover {
-        opacity: 0.5;
+        margin-bottom: -8px;
+        transition: all 0.2s ease;
       }
     }
 
@@ -84,7 +88,8 @@
       }
 
       &:hover {
-        opacity: 0.5;
+        margin-bottom: -8px;
+        transition: all 0.2s ease;
       }
     }
   }
