@@ -11,10 +11,9 @@ class Admin::AttendancesController < ApplicationController
     @attendance = Attendance.new(attendance_params)
     @attendance.course = @course
     @attendance.user = @user
-    if @attendance.save!
-      @attendance.attended = true
+    @attendance.attended = true
+    @attendance.save!
       redirect_to new_admin_course_attendance_path(@course)
-    end
   end
 
   private
