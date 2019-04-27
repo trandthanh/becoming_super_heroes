@@ -9,9 +9,6 @@ class Admin::CoursesController < ApplicationController
     @skills_subjects = Subject.where(category: 'Compétences')
   end
 
-  def show
-    @course = Course.find(params[:id])
-  end
 
   def new
     @course = Course.new

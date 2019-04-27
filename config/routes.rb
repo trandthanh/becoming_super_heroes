@@ -19,7 +19,9 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: "dashboards#index"
     resources :wishes, only: [:index, :show]
-    resources :courses, only: [:index, :show, :new, :create]
+    resources :courses, only: [:index, :show, :new, :create] do
+      resources :attendances, only: [:new, :create]
+    end
     resources :talks, only: [:index, :show, :new, :create]
     resources :subjects, only: [:show]
     resources :users, only: [:index]
