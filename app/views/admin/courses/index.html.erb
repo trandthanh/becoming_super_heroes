@@ -32,7 +32,7 @@
               <td><%= course.schedule %></td>
               <td><%= course.attendances.length %></td>
               <td><%= course.capacity - course.attendances.length %></td>
-              <td class= "border-top-2px"><%= link_to admin_course_path(course.id) do %>
+              <td class= "border-top-2px"><%= link_to new_admin_course_attendance_path(course.id) do %>
                 <i class="far fa-eye color-white "></i>
                 <% end %>
               </td>
