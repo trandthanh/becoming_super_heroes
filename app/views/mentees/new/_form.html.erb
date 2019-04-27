@@ -1,0 +1,39 @@
+<%= simple_form_for @mentee do |f| %>
+
+  <h4 class="indigodyeblue-text">Votre maladie</h4>
+
+  <%= f.input :hospital, collection: @hospitals, as: :select %>
+  <%= f.input :sickness, collection: @sicknesses, as: :select %>
+
+  <h4 class="indigodyeblue-text">Vos hobbies</h4>
+
+  <%= f.input :hobby_head, collection: @head_hobbies %>
+  <%= f.input :hobby_body, collection: @body_hobbies %>
+
+  <h4 class="indigodyeblue-text">Vos infos personnelles</h4>
+  <p>Si vous êtes déjà membre de PROJET X, votre parcours sera synchronisé à votre compte.</p>
+  <div class="new-wish-form-others">
+    <%= simple_fields_for :other do |o| %>
+      <div class="row">
+        <div class="col-6">
+          <%= o.input :first_name, as: :string, label: 'Prénom' %>
+        </div>
+        <div class="col-6">
+          <%= o.input :last_name, as: :string, label: 'Nom' %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-6">
+          <%= o.input :email, as: :string, label: 'Email' %>
+        </div>
+        <div class="col-6">
+          <%= o.input :zipcode, as: :string, label: 'Code Postal' %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+
+  <div class="d-flex justify-content-center">
+    <%= f.button :submit, 'ENVOYER', class: "btn btn-sunglow mt-5" %>
+  </div>
+<% end %>

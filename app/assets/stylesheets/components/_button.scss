@@ -6,3 +6,29 @@
   font-weight: 500;
   color: white;
 }
+
+
+
+.button-indigodye {
+  background-color: $indigo-dye;
+  padding: 20px 25px;
+  font-weight: 500;
+  color: white;
+  width: max-content;
+  &:hover {
+    opacity: 0.8;
+    color: white;
+  }
+}
+
+.button-small-indigodye {
+  background-color: $indigo-dye;
+  padding: 10px 15px;
+  font-weight: 500;
+  color: white;
+  width: max-content;
+  &:hover {
+    opacity: 0.8;
+    color: white;
+  }
+}

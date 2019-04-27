@@ -8,7 +8,6 @@ class ApplicationController < ActionController::Base
     redirect_to '/' unless current_user.admin == true
   end
 
-
   protected
 
     def configure_permitted_parameters

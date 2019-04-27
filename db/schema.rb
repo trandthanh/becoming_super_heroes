@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_25_135447) do
+ActiveRecord::Schema.define(version: 2019_04_25_160504) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,10 @@ ActiveRecord::Schema.define(version: 2019_04_25_135447) do
   create_table "mentees", force: :cascade do |t|
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "hospital"
+    t.string "sickness"
+    t.string "hobby_head"
+    t.string "hobby_body"
   end
 
   create_table "mentors", force: :cascade do |t|
@@ -128,7 +132,9 @@ ActiveRecord::Schema.define(version: 2019_04_25_135447) do
     t.string "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.boolean "admin", default: false
+    t.boolean "admin", default: false, null: false
+    t.float "latitude"
+    t.float "longitude"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["mentee_id"], name: "index_users_on_mentee_id"

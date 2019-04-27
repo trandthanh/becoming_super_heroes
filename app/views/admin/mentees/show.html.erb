@@ -1,0 +1,16 @@
+<h1><%= @mentee.user.email %></h1>
+
+<ul>
+  <li><p><%= @mentee.user.zipcode %></p> / <%= @mentee.user.longitude %> / <%= @mentee.user.latitude %></li>
+  <li><p><%= @mentee.user.hospital %></p></li>
+  <li><p><%= @mentee.user.sickness %></p></li>
+  <li><p><%= @mentee.user.hobby_head %></p></li>
+  <li><p><%= @mentee.user.hobby_body %></p></li>
+  <li><p><%= @mentee.user.age %></p></li>
+</ul>
+
+<h1>Potential matches</h1>
+
+<% @top_matches.each do |user| %>
+  <%= user.email %>
+<% end %>
