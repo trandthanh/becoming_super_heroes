@@ -39,3 +39,38 @@
     border-bottom: 1px solid $pastel-gray;
   }
 }
+
+.admin_courses_teacher input {
+  width: 400px !important;
+}
+
+.admin_courses_subject input {
+  width: 400px !important;
+}
+
+.admin_courses_schedule input {
+  width: 400px !important;
+}
+
+.admin_courses_location input {
+  width: 400px !important;
+}
+.admin_courses_capacity input {
+  width: 400px !important;
+}
+
+.label_admin {
+
+ font-family: "Work Sans", "Helvetica", "sans-serif";
+     font-weight: bold !important;
+    color: $grey;
+}
+
+.panel h5 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  color: $grey;
+    border-bottom: solid $grey 1px;
+    margin-bottom: 20px;
+}
