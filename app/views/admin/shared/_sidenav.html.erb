@@ -1,20 +1,32 @@
-<div class="dashboard-navbar col-sm-2 backgroundcolor-japaneseindigo color-white p-4">
-  <%= link_to admin_root_path, class: "clean-link color-white-with-hover-white" do %>
-    <h6>Dashboard</h6>
-  <% end %>
-  <%= link_to admin_users_path, class: "clean-link color-white-with-hover-white" do %>
-    <h6>Users</h6>
-  <% end %>
-  <%= link_to admin_matches_path, class: "clean-link color-white-with-hover-white" do %>
-    <h6>Matches</h6>
-  <% end %>
-  <%= link_to admin_wishes_path, class: "clean-link color-white-with-hover-white" do %>
-    <h6>Tracks</h6>
-  <% end %>
-  <%= link_to admin_courses_path, class: "clean-link color-white-with-hover-white" do %>
-    <h6>Cours & Classes</h6>
-  <% end %>
-  <%= link_to admin_courses_path, class: "clean-link color-white-with-hover-white" do %>
-    <h6>Conférences & Ateliers</h6>
-  <% end %>
+<div class="dashboard-navbar col-sm-2 paddingy-100px paddingleft-20px">
+  <div class="d-flex flex-column align-items-center text-center">
+    <%= image_tag 'avatar-placeholder.jpg', class: "avatar-large mb-2" %>
+    <p class="color-gray">Bienvenue, <br> Admin</p>
+  </div>
+  <div class="mt-5">
+    <%= link_to admin_root_path, class: "clean-link color-indigodye" do %>
+      <h6>Dashboard</h6>
+    <% end %>
+    <%= link_to admin_users_path, class: "clean-link color-indigodye" do %>
+      <h6>Users</h6>
+    <% end %>
+    <%= link_to admin_matches_path, class: "clean-link color-indigodye" do %>
+      <h6>Matches</h6>
+    <% end %>
+    <%= link_to admin_wishes_path, class: "clean-link color-indigodye" do %>
+      <h6>Tracks</h6>
+    <% end %>
+    <%= link_to admin_courses_path, class: "clean-link color-indigodye" do %>
+      <h6>Cours & Classes</h6>
+    <% end %>
+    <%= link_to admin_courses_path, class: "clean-link color-indigodye" do %>
+      <h6>Conférences & Ateliers</h6>
+    <% end %>
+    <%= link_to dashboard_user_path, class: "clean-link color-indigodye" do %>
+      <h6>Accueil</h6>
+    <% end %>
+    <%= link_to dashboard_user_path, class: "clean-link color-indigodye" do %>
+      <h6>Nous Contacter</h6>
+    <% end %>
+  </div>
 </div>

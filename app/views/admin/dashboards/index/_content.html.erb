@@ -1,10 +1,23 @@
-<div class="dashboard-content-stats" style="border: 2px solid red">
-  <h1>TBD</h1>
+<div class="dashboard-content-stats">
+ <div class="row p-3">
+   <div class="col backgroundcolor-white p-4 mx-1">
+    <h5># D'UTILISATEURS</h5>
+    <h1>0</h1>
+   </div>
+   <div class="col backgroundcolor-white p-4 mx-1">
+    <h5># DE MATCHES</h5>
+    <h1>0</h1>
+   </div>
+   <div class="col backgroundcolor-white p-4 mx-1">
+    <h5># DE COURS OUVERTS</h5>
+    <h1>0</h1>
+   </div>
+ </div>
 </div>
 
 <div class="row p-3">
-  <div class="col-sm-8 dashboard-content-wishes p-4 backgroundcolor-white">
-    <h5 class="mb-3">WISHES RECENTS</h5>
+  <div class="col dashboard-content-wishes p-4 backgroundcolor-white mx-1">
+    <h5 class="mb-3">WISHES A VALIDER</h5>
     <% @recent_wishes.each do |wish| %>
       <%= link_to admin_wish_path(wish), class: "clean-link" do %>
         <div class="dashboard-card p-4">
@@ -36,9 +49,9 @@
               </div>
             <% else %>
               <!-- a enlever -->
-              <div class="p-2 fontsize-13px border-1px-solid-gray backgroundcolor-grey">
+<!--               <div class="p-2 fontsize-13px border-1px-solid-gray backgroundcolor-grey">
                 <p class="m-0">Nouveau</p>
-              </div>
+              </div> -->
             <% end %>
           </div>
         </div>
@@ -46,5 +59,8 @@
     <% end %>
   </div>
 
-  <div class="col-sm-4" style="border: 2px solid green;"></div>
+  <div class="col dashboard-content-wishes p-4 backgroundcolor-white mx-1">
+    <h5 class="mb-3">MATCHES A VALIDER</h5>
+
+  </div>
 </div>

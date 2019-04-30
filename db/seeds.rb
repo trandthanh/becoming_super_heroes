@@ -11,8 +11,8 @@ User.destroy_all
 Track.destroy_all
 Wish.destroy_all
 Subject.destroy_all
-Mentor.destroy_all
 Mentee.destroy_all
+Mentor.destroy_all
 
 
 # USERS
@@ -20,9 +20,9 @@ Mentee.destroy_all
 puts 'Creating users ...'
 users_attributes = [
   {
-    email: 'test1@gmail.com',
-    first_name: 'Macadamia 1',
-    last_name: 'Test 1',
+    email: 'obiwan.kenobi@gmail.com',
+    first_name: 'Obiwan',
+    last_name: 'Kenobi',
     zipcode: '75005',
     password: '123456',
     age: 25,
@@ -32,9 +32,9 @@ users_attributes = [
     hobby_body: 'Zumba'
   },
   {
-    email: 'test2@gmail.com',
-    first_name: 'Macadamia 2',
-    last_name: 'Test 2',
+    email: 'anakin.skywalker@gmail.com',
+    first_name: 'Anakin',
+    last_name: 'Skywalker',
     zipcode: '75007',
     password: '123456',
     age: 30,
@@ -44,9 +44,9 @@ users_attributes = [
     hobby_body: 'Yoga'
   },
   {
-    email: 'test3@gmail.com',
-    first_name: 'Macadamia 3',
-    last_name: 'Test 3',
+    email: 'kylo.ren@gmail.com',
+    first_name: 'Kylo',
+    last_name: 'Ren',
     zipcode: '92340',
     password: '123456',
     age: 30,
@@ -56,9 +56,9 @@ users_attributes = [
     hobby_body: 'Yoga'
   },
   {
-    email: 'test4@gmail.com',
-    first_name: 'Macadamia 4',
-    last_name: 'Test 4',
+    email: 'R2D2@gmail.com',
+    first_name: 'R2D2',
+    last_name: 'Bot',
     zipcode: '75019',
     password: '123456',
     age: 27,
@@ -68,9 +68,9 @@ users_attributes = [
     hobby_body: 'Zumba'
   },
   {
-    email: 'test5@gmail.com',
-    first_name: 'Macadamia 5',
-    last_name: 'Test 5',
+    email: 'leia.organa@gmail.com',
+    first_name: 'Leia',
+    last_name: 'Organa',
     zipcode: '69002',
     password: '123456',
     age: 27,
@@ -80,9 +80,9 @@ users_attributes = [
     hobby_body: 'Zumba'
   },
   {
-    email: 'test6@gmail.com',
-    first_name: 'Macadamia 6',
-    last_name: 'Test 6',
+    email: 'han.solo@gmail.com',
+    first_name: 'Han',
+    last_name: 'Solo',
     zipcode: '69006',
     password: '123456',
     age: 27,
@@ -100,42 +100,56 @@ users_attributes = [
 User.create!(users_attributes)
 puts 'Users created!'
 
+obiwan = User.find_by(email: 'obiwan.kenobi@gmail.com')
+anakin = User.find_by(email: 'anakin.skywalker@gmail.com')
+kylo = User.find_by(email: 'kylo.ren@gmail.com')
+leia = User.find_by(email: 'leia.organa@gmail.com')
+han = User.find_by(email: 'han.solo@gmail.com')
+R2D2 = User.find_by(email: 'R2D2@gmail.com')
 
 # MENTORS
 
 puts 'Creating mentors...'
-6.times do
+3.times do
   Mentor.create
 end
 puts 'Mentors created'
 
+m1 = Mentor.first
+m2 = Mentor.second
+m3 = Mentor.last
+
 puts 'Linking mentors and users...'
-m = 0
-User.all.each do |user|
-  mentors = Mentor.all
-  user.mentor = mentors[m]
-  user.save
-  m += 1
-end
+obiwan.mentor = m1
+obiwan.save
+anakin.mentor = m2
+anakin.save
+kylo.mentor = m3
+kylo.save
 puts 'Linking mentors and users done!'
 
 
 # MENTEES
 
 puts 'Creating mentees...'
-6.times do
+5.times do
   Mentee.create
 end
 puts 'Mentees created!'
 
+me1 = Mentee.first
+me2 = Mentee.second
+me3 = Mentee.third
+me4 = Mentee.fourth
+
 puts 'Linking mentees and users...'
-m = 0
-User.all.each do |user|
-  mentees = Mentee.all
-  user.mentee = mentees[m]
-  user.save
-  m += 1
-end
+obiwan.mentee = me2
+obiwan.save
+anakin.mentee = me1
+kylo.mentee = me3
+kylo.save
+leia.mentee = me4
+leia.save
 puts 'Linking mentees and users done!'
 
 
@@ -181,3 +195,62 @@ subjects_attributes = [
 ]
 Subject.create!(subjects_attributes)
 puts 'Subjects created!'
+
+ecriture = Subject.find_by(name: 'Ecriture')
+peinture = Subject.find_by(name: 'Peinture')
+yoga = Subject.find_by(name: 'Yoga')
+zumba = Subject.find_by(name: 'Zumba')
+
+puts 'Creating parcours ...'
+wishes_attributes = [
+  {
+    user: leia,
+    status: "Nouveau",
+    wish_head: "Avez-vous l'option Théâtre ?"
+  },
+  {
+    user: anakin,
+    status: "En cours d'organisation",
+    wish_body: "Taekwendo possible ?"
+  },
+  {
+    user: han,
+    status: "Nouveau"
+  }
+]
+Wish.create!(wishes_attributes)
+
+w1 = Wish.first
+w2 = Wish.second
+w3 = Wish.third
+
+tracks_attributes = [
+  {
+    wish: w1,
+    subject: peinture
+  },
+  {
+    wish: w1,
+    subject: yoga
+  },
+  {
+    wish: w2,
+    subject: peinture
+  },
+  {
+    wish: w3,
+    subject: zumba
+  },
+  {
+    wish: w3,
+    subject: peinture
+  },
+  {
+    wish: w3,
+    subject: yoga
+  }
+]
+Track.create!(tracks_attributes)
+puts 'Parcours created!'
+
+
