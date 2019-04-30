@@ -1,5 +1,70 @@
-<div class="" style="background: url(<%= asset_path 'sunglowblob.svg' %>); background-position: left; background-size: contain; background-repeat: no-repeat; padding: 50px 0;">
-  <h1 class="indigodyeblue-text">LE MENTORAT ?</h1>
+<div class="height-200px mb-3" style="background-image: url(<%= asset_path 'sunglowblob.svg' %>); background-size: contain; background-position: left; background-repeat: no-repeat;">
+  <%= image_tag "10.png", class: "height-200px" %> <h1>Le mentorat</h1>
 </div>
 
-<p>Contenu sur le mentorat</p>
+<div class="margintop-100px">
+  <h6>Lorsque la nouvelle tombe, à cet âge là, entre 20 et 35 ans, le sentiment de solitude est généralement une triste réalité. On a peut-être entendu parler d'un.e ami.e. d'ami.e., on connait peut-être quelqu'un mais de loin, on connait quelqu'un de plus âge, mais de notre âge ? Les statistiques parlent d'eux-mêmes, nous avons peu de recul sur la situation pour cette tranche d'âge mais il est indéniable que le cancer sévit de plus en plus chez cette jeune population.
+  <br>
+  Alors, si vous avez besoin d'une épaule, quelqu'un pour vous partager son expérience, répondre à vos questions ou simplement pour vous écouter, nous avons à votre disposition une équipe de super-parrains et de super-marraines. Nous espérons que d'ici quelques temps, vous deviendrez à votre tour, un super-mentor.
+  <br><br>
+  Notre algorithme vous matchera en fonction de votre profil hospitalier et de vos préférences (vos hobbies !). Nous vous laisserons finalement le dernier mot pour choisir votre mentor parmi notre pré-sélection.</h6>
+</div>
+
+<div class="background-color-indigodye mt-5 p-4 text-center">
+  <h2 class="color-white">Comment ça marche ?</h2>
+
+  <div class="row mx-2 mt-5">
+    <div class="col backgroundcolor-white p-3 d-flex flex-column align-items-center">
+      <div class="height-70px d-flex align-items-center">
+        <div class="border-radius-50pc backgroundcolor-sunglow height-50px width-50px d-flex align-items-center justify-content-center">
+          <h2 class="p-0 m-0 color-white">1</h2>
+        </div>
+      </div>
+
+      <p class="fontsize-13px mt-4">Je remplis le formulaire à ma droite en précisant mon profil hospitalier ainsi que mes loisirs.</p>
+    </div>
+    <div class="col backgroundcolor-white p-3 d-flex flex-column align-items-center">
+      <div class="height-70px d-flex align-items-center">
+        <div class="border-radius-50pc backgroundcolor-sunglow height-50px width-50px d-flex align-items-center justify-content-center">
+          <h2 class="p-0 m-0 color-white">2</h2>
+        </div>
+      </div>
+
+      <p class="fontsize-13px mt-4">Si je suis nouveau sur la plateforme, je recevrais un e-mail d'un bénévole d'AkTIO dans les 48h afin de convenir d'un RDV pour un appel.</p>
+    </div>
+    <div class="col backgroundcolor-white p-3 d-flex flex-column align-items-center">
+      <div class="height-70px d-flex align-items-center">
+        <div class="border-radius-50pc backgroundcolor-sunglow height-50px width-50px d-flex align-items-center justify-content-center">
+          <h2 class="p-0 m-0 color-white">3</h2>
+        </div>
+      </div>
+
+      <p class="fontsize-13px mt-4">Notre algorithme vous aidera à vous pré-sélectionner entre 3-5 mentors potentiels.</p>
+    </div>
+    <div class="col backgroundcolor-white p-3 d-flex flex-column align-items-center">
+      <div class="height-70px d-flex align-items-center">
+        <div class="border-radius-50pc backgroundcolor-sunglow height-50px width-50px d-flex align-items-center justify-content-center">
+          <h2 class="p-0 m-0 color-white">4</h2>
+        </div>
+      </div>
+
+      <p class="fontsize-13px mt-4">Le dernier mot vous revient. Connectez-vous à la plateforme pour choisir votre parrain ou votre marraine ! Happy connecting !</p>
+    </div>
+  </div>
+</div>
+
+<div class="mt-5 p-3">
+  <div class="row">
+    <div class="col height-50vh" style="background-image: url(<%= asset_path 'meetstory-placeholder.jpg' %>); background-size: cover; background-position: center;"></div>
+    <div class="col d-flex flex-column justify-content-center">
+      <h6 class="color-gray">La Story</h6>
+      <h2 class="color-indigodye">Lorsque Guillaume rencontre Samuel</h2>
+
+      <p class="my-5">
+        Deux inconnus qui se sont rencontrés avec AkTIO. Une passion commune, le baseball. A l'inverse de la maladie, une amitié qui est faite pour durer.
+      </p>
+
+      <%= link_to "Lire leur story", root_path, class: "btn button-small-indigodye" %>
+    </div>
+  </div>
+</div>
