@@ -1,5 +1,5 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon justify-content-between height-79px" >
-  <div class="navbar-left d-flex justify-content-between align-items-center <%= current_page?(dashboard_user_path) ? '' : 'mt-3' %>">
+  <div class="navbar-left d-flex justify-content-between align-items-center <%= current_page?(dashboard_user_path) || current_page?(admin_root_path) ? '' : 'mt-3' %>">
     <%= link_to root_path, class: "navbar-brand marginleft-15px" do %>
       <%= image_tag "aktio-logo.png" %>
     <% end %>
@@ -9,7 +9,7 @@
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <% unless current_page?(dashboard_user_path) %>
+    <% unless current_page?(dashboard_user_path) || current_page?(admin_root_path) %>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto marginbottom-neg35px">
           <li class="nav-item">
@@ -29,7 +29,7 @@
   <% if user_signed_in? %>
     <div class="navbar-right">
       <div class="top-menu d-flex justify-content-end">
-        <% if current_page?(dashboard_user_path) %>
+        <% if current_page?(dashboard_user_path) || current_page?(admin_root_path) %>
           <button class= "navbar-btn-ceruleanblue-active d-flex justify-content-center align-items-center"><%= link_to "Mon tableau de bord", dashboard_user_path, class: "nav-link-button" %></button>
         <% else %>
           <button class= "navbar-btn-ceruleanblue d-flex justify-content-center align-items-center"><%= link_to "Mon tableau de bord", dashboard_user_path, class: "nav-link-button" %></button>
