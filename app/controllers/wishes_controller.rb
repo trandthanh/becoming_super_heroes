@@ -21,7 +21,7 @@ class WishesController < ApplicationController
     elsif !User.where(email: params[:other][:email]).exists?
       params[:wish][:track_ids].delete("")
       @tracks = params[:wish][:track_ids]
-      @user = User.create(email: params[:other][:email], password: "123456")
+      @user = User.create(email: params[:other][:email], password: "123456", first_name: params[:other][:first_name], last_name: params[:other][:last_name], zipcode: params[:other][:zipcode])
       @wish.user = @user
       if @tracks.any? || @tracks.size > 1
         @wish.save
@@ -57,7 +57,7 @@ class WishesController < ApplicationController
   private
 
   def wish_params
-    params.require(:wish).permit(:user)
+    params.require(:wish).permit(:user, :wish_head, :wish_body)
   end
 
 end

@@ -1,9 +1,68 @@
-<div class="" style="background: url(<%= asset_path 'sunglowblob.svg' %>); background-position: left; background-size: contain; background-repeat: no-repeat; padding: 50px 0;">
-  <h1 class="indigodyeblue-text">LE PARCOURS ?</h1>
+<div class="height-200px mb-3" style="background-image: url(<%= asset_path 'sunglowblob.svg' %>); background-size: contain; background-position: left; background-repeat: no-repeat;">
+  <%= image_tag "05.png", class: "height-200px" %> <h1>Le parcours</h1>
 </div>
 
-<p>Nous pensons qu’il est indispensable de faire, d’être dans l’action pour se retrouver après la maladie.
-Pas seulement faire du sport ou bouger mais également faire participer son esprit à des activités
-d’expression de soi. C’est pourquoi, nous vous proposons un parcours pour aider à se reconstruire
-après la maladie basé sur la complémentarité entre l’esprit (“head”), le corps (“body”), la confiance de soi
-(“shooting photo”) et la connaissance de soi (“coaching personnel”).</p>
+<div class="margintop-100px">
+  <h6>Que l'on décide d'en parler ou non, la maladie ne doit pas nous remplacer. Elle fait partie de notre identité, certes, mais elle ne peut nous définir. Chez les patient.e.s, peu importe leur rapport avec la maladie, nous avons remarqué la présence des mêmes questionnements, des mêmes troubles. Nous sommes différents mais nous avons tous besoin de réponses sur nous-mêmes, sur la maladie, sur notre futur.
+  <br><br>
+  Comme un pouvoir qu'on ne pouvons contrôler, nous pensons que la meilleure façon de le maîtriser est d’être dans l’action. Se retrouver après la maladie, ce n'est pas seulement faire du sport ou bouger mais également s'exprimer, se comprendre, reprendre confiance en soi, définir les tracés de son avenir. C’est pourquoi, nous vous proposons un parcours pour aider à se reconstruire après la maladie basé sur la complémentarité entre l’esprit et le corps (“body”), la confiance de soi et la connaissance de soi.</h6>
+</div>
+
+<div class="background-color-indigodye mt-5 p-4 text-center">
+  <h2 class="color-white">Comment ça marche ?</h2>
+
+  <div class="row mx-2 mt-5">
+    <div class="col backgroundcolor-white p-3 d-flex flex-column align-items-center">
+      <div class="height-70px d-flex align-items-center">
+        <div class="border-radius-50pc backgroundcolor-sunglow height-50px width-50px d-flex align-items-center justify-content-center">
+          <h2 class="p-0 m-0 color-white">1</h2>
+        </div>
+      </div>
+
+      <p class="fontsize-13px mt-4">Remplis le formulaire à ta droite en précisant les activités qui t'intéressent le plus pour ton parcours.</p>
+    </div>
+    <div class="col backgroundcolor-white p-3 d-flex flex-column align-items-center">
+      <div class="height-70px d-flex align-items-center">
+        <div class="border-radius-50pc backgroundcolor-sunglow height-50px width-50px d-flex align-items-center justify-content-center">
+          <h2 class="p-0 m-0 color-white">2</h2>
+        </div>
+      </div>
+
+      <p class="fontsize-13px mt-4">Tu recevras un e-mail d'un bénévole d'AkTIO dans les 48h afin de convenir d'un RDV pour un appel. Cet appel va nous permettre de mieux te connaître pour mieux t'accompagner.</p>
+    </div>
+    <div class="col backgroundcolor-white p-3 d-flex flex-column align-items-center">
+      <div class="height-70px d-flex align-items-center">
+        <div class="border-radius-50pc backgroundcolor-sunglow height-50px width-50px d-flex align-items-center justify-content-center">
+          <h2 class="p-0 m-0 color-white">3</h2>
+        </div>
+      </div>
+
+      <p class="fontsize-13px mt-4">Suite à notre appel, nous t'inscrivons aux activités sur les disponibilités que tu nous auras indisquées.</p>
+    </div>
+    <div class="col backgroundcolor-white p-3 d-flex flex-column align-items-center">
+      <div class="height-70px d-flex align-items-center">
+        <div class="border-radius-50pc backgroundcolor-sunglow height-50px width-50px d-flex align-items-center justify-content-center">
+          <h2 class="p-0 m-0 color-white">4</h2>
+        </div>
+      </div>
+
+      <p class="fontsize-13px mt-4">Connecte-toi sur ton tableau de bord via ton compte pour voir les détails concernant les ateliers auxquels tu es inscrits !</p>
+    </div>
+  </div>
+</div>
+
+<div class="mt-5 p-3">
+  <div class="row">
+    <div class="col height-50vh" style="background-image: url(<%= asset_path 'trackbodystory-placeholder.jpg' %>); background-size: cover; background-position: center;"></div>
+    <div class="col d-flex flex-column justify-content-center">
+      <h6 class="color-gray">La Story</h6>
+      <h2 class="color-indigodye">Un Yoga adapté à vos traitements</h2>
+
+      <p class="my-5">
+        Du Yoga oui, mais personnalisé pour chacun en fonction des opérations et des traitements. Garder la forme, malgré les douleurs.
+      </p>
+
+      <%= link_to "Lire leur story", root_path, class: "btn button-small-indigodye" %>
+    </div>
+  </div>
+</div>

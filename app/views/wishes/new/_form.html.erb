@@ -1,55 +1,65 @@
 <%= simple_form_for @wish do |f| %>
-  <h4 class="indigodyeblue-text">S'exprimer</h4>
-  <%#= f.collection_check_boxes :track_ids, @head_subjects, :id, :name %>
-  <%#= f.association :tracks, as: :check_boxes, collection: @head_subjects, label_method: :name, value_method: :id, include_blank: false %>
-  <fieldset class="form-group">
-    <input type="hidden" name="wish[track_ids][]" value="">
-    <div class="wish_tracks">
-      <% head_subjects.each do |subject| %>
-          <input hidden type="checkbox" value="<%= subject.id %>" name="wish[track_ids][]" id="wish_track_ids_<%= subject.id %>">
-          <label class="wish_track" for="wish_track_ids_<%= subject.id %>">
-            <%= subject.name %>
-          </label>
+  <div class="mb-5">
+    <h4 class="indigodyeblue-text">S'exprimer</h4>
+    <%#= f.collection_check_boxes :track_ids, @head_subjects, :id, :name %>
+    <%#= f.association :tracks, as: :check_boxes, collection: @head_subjects, label_method: :name, value_method: :id, include_blank: false %>
+    <fieldset class="form-group mb-0">
+      <input type="hidden" name="wish[track_ids][]" value="">
+      <div class="wish_tracks">
+        <% head_subjects.each do |subject| %>
+            <input hidden type="checkbox" value="<%= subject.id %>" name="wish[track_ids][]" id="wish_track_ids_<%= subject.id %>">
+            <label class="wish_track" for="wish_track_ids_<%= subject.id %>">
+              <%= subject.name %>
+            </label>
+        <% end %>
+      </div>
+    </fieldset>
+
+    <%= f.input :wish_head, label: "Tu peux également nous proposer une activité d'expression de soi" %>
+  </div>
+
+  <div class="mb-5">
+    <h4 class="indigodyeblue-text">Reprendre possession de son corps</h4>
+    <%#= f.association :tracks, as: :check_boxes, collection: @body_subjects, value_method: :id %>
+    <fieldset class="form-group mb-0">
+      <input type="hidden" name="wish[track_ids][]" value="">
+      <div class="wish_tracks">
+        <% body_subjects.each do |subject| %>
+            <input hidden type="checkbox" value="<%= subject.id %>" name="wish[track_ids][]" id="wish_track_ids_<%= subject.id %>">
+            <label class="wish_track" for="wish_track_ids_<%= subject.id %>">
+              <%= subject.name %>
+            </label>
+        <% end %>
+      </div>
+    </fieldset>
+
+    <%= f.input :wish_body, label: "Tu peux également nous proposer une activité sportive" %>
+  </div>
+
+
+  <div>
+    <h4 class="indigodyeblue-text">Vos infos personnelles</h4>
+    <p>Si vous êtes déjà membre de PROJET X, votre parcours sera synchronisé à votre compte.</p>
+    <div class="new-wish-form-others">
+      <%= simple_fields_for :other do |o| %>
+        <div class="row">
+          <div class="col-6">
+            <%= o.input :first_name, as: :string, label: 'Prénom' %>
+          </div>
+          <div class="col-6">
+            <%= o.input :last_name, as: :string, label: 'Nom' %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-6">
+            <%= o.input :email, as: :string, label: 'Email' %>
+          </div>
+          <div class="col-6">
+            <%= o.input :zipcode, as: :string, label: 'Code Postal' %>
+          </div>
+        </div>
       <% end %>
     </div>
-  </fieldset>
-
-  <h4 class="indigodyeblue-text">Reprendre possession de son corps</h4>
-  <%#= f.association :tracks, as: :check_boxes, collection: @body_subjects, value_method: :id %>
-  <fieldset class="form-group">
-    <input type="hidden" name="wish[track_ids][]" value="">
-    <div class="wish_tracks">
-      <% body_subjects.each do |subject| %>
-          <input hidden type="checkbox" value="<%= subject.id %>" name="wish[track_ids][]" id="wish_track_ids_<%= subject.id %>">
-          <label class="wish_track" for="wish_track_ids_<%= subject.id %>">
-            <%= subject.name %>
-          </label>
-      <% end %>
-    </div>
-  </fieldset>
-
-
-  <h4 class="indigodyeblue-text">Vos infos personnelles</h4>
-  <p>Si vous êtes déjà membre de PROJET X, votre parcours sera synchronisé à votre compte.</p>
-  <div class="new-wish-form-others">
-    <%= simple_fields_for :other do |o| %>
-      <div class="row">
-        <div class="col-6">
-          <%= o.input :first_name, as: :string, label: 'Prénom' %>
-        </div>
-        <div class="col-6">
-          <%= o.input :last_name, as: :string, label: 'Nom' %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-6">
-          <%= o.input :email, as: :string, label: 'Email' %>
-        </div>
-        <div class="col-6">
-          <%= o.input :zipcode, as: :string, label: 'Code Postal' %>
-        </div>
-      </div>
-    <% end %>
   </div>
 
   <div class="d-flex justify-content-center">
