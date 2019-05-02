@@ -65,6 +65,6 @@ class MenteesController < ApplicationController
   private
 
   def mentee_params
-    params.require(:mentee).permit(:hospital, :sickness, :hobby_one, :hobby_two, :user)
+    params.require(:mentee).permit(:hospital, :sickness, :hobby_one, :hobby_two, :user, :avatar)
   end
 end
