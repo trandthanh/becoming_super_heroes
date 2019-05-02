@@ -35,6 +35,14 @@
             <%= o.input :zipcode, as: :string, label: 'Code Postal' %>
           </div>
         </div>
+        <div class="row">
+          <div class="col-6">
+            <div class="field">
+              <%= o.label :avatar, label: 'Votre photo' %>
+              <%= o.file_field :avatar %>
+            </div>
+          </div>
+        </div>
       <% end %>
     </div>
   </div>

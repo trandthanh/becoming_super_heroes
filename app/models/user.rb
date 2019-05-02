@@ -11,4 +11,5 @@ class User < ApplicationRecord
   belongs_to :mentee, optional: true
   belongs_to :mentor, optional: true
   has_many :wishes
+  has_one_attached :avatar
 end
