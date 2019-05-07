@@ -1,0 +1,26 @@
+ <div class="wrapper-story height-25vh color-cerulean-blue d-flex align-items-center position-relative">
+    <div><%= image_tag "round.svg", class: "round position-absolute height-85px" %></div>
+    <h1 class= "text-center title-contact position-absolute "> NOUS CONTACTER</h1>
+  </div>
+
+<div class="container">
+
+  <%= simple_form_for @contact do |f| %>
+    <div class="mb-5">
+      <div class="row">
+        <div class="col-6">
+          <%= f.input :name, as: :string, label: 'Nom et Prénom' %>
+          <%= f.input :subject, as: :string, label: 'Sujet' %>
+          <%= f.input :message, as: :text, label: 'Message' %>
+              <div class="d-flex justify-content-center">
+            <%= f.button :submit, 'ENVOYER', class: "btn btn-sunglow" %>
+          </div>
+        </div>
+        <div class="col-6 d-flex justify-content-center" style="background-image: url(<%= asset_path 'sunglowblob2.svg' %>); background-size: contain; background-position: top; background-repeat: no-repeat;">
+          <%= image_tag "11.png", class: "height-450px margintop-neg2pc" %>
+        </div>
+      </div>
+
+    </div>
+  <% end %>
+</div>

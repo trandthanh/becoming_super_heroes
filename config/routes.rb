@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :mentees, only: [:new, :create]
   get '/mentees/confirm', to: 'mentees#confirm'
 
+  resources :contacts, only: [:new, :create]
   resources :wishes, only: [:new, :create]
   get '/wishes/confirm', to: 'wishes#confirm'
 
@@ -20,6 +21,7 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: "dashboards#index"
     resources :wishes, only: [:index, :show]
+    resources :contacts, only: [:index, :show]
     resources :courses, only: [:index, :show, :new, :create] do
       resources :attendances, only: [:new, :create]
     end
