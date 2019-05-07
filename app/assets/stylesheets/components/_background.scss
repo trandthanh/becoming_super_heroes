@@ -25,3 +25,24 @@
 .background-color-indigodye {
   background-color: $indigo-dye;
 }
+
+.background-color-ceruleanblue {
+   background-color: $cerulean-blue;
+}
+
+.background-img {
+    // background-image: asset-url('darkdenim3.png');
+  background-image: asset-url('06.png') !important;
+  height: 100%;
+
+
+}
+
+.wrapper-story {
+    width: 50vw;
+
+    margin-top: 3%;
+
+}
+
+

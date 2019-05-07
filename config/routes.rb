@@ -15,6 +15,8 @@ Rails.application.routes.draw do
   # end
 
   get '/dashboards', to: 'dashboards#index', as: :dashboard_user
+  get '/notrehistoire', to: 'pages#notrehistoire'
+  get '/nosactions', to: 'pages#nosactions'
 
   namespace :admin do
     root to: "dashboards#index"

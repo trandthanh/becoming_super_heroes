@@ -1,14 +1,39 @@
+<% if current_user.avatar.attached? %>
+  <div class="dashboard-navbar col-sm-2 paddingy-100px paddingleft-20px">
+    <div class="d-flex flex-column align-items-center text-center">
+      <%= image_tag current_user.avatar, class: "avatar avatar-large mb-2" %>
+      <p class="color-gray">Bienvenue, <br> <%= current_user.first_name %></p>
+    </div>
+    <div class="mt-5">
+      <%= link_to dashboard_user_path, class: "clean-link color-indigodye" do %>
+        <h6>Accueil</h6>
+      <% end %>
+      <%= link_to dashboard_user_path, class: "clean-link color-indigodye" do %>
+        <h6>Nous Contacter</h6>
+      <% end %>
+    </div>
+  </div>
+<% else %>
 <div class="dashboard-navbar col-sm-2 paddingy-100px paddingleft-20px">
-  <div class="d-flex flex-column align-items-center text-center">
-    <%= image_tag 'avatar-placeholder.jpg', class: "avatar-large mb-2" %>
-    <p class="color-gray">Bienvenue, <br> <%= current_user.first_name %></p>
+    <div class="d-flex flex-column align-items-center text-center">
+      <%= image_tag 'avatar-placeholder.jpg', class: "avatar-large mb-2" %>
+      <p class="color-gray">Bienvenue, <br> <%= current_user.first_name %></p>
+    </div>
+    <div class="mt-5">
+      <%= link_to dashboard_user_path, class: "clean-link color-indigodye" do %>
+        <h6>Accueil</h6>
+      <% end %>
+      <%= link_to dashboard_user_path, class: "clean-link color-indigodye" do %>
+        <h6>Nous Contacter</h6>
+      <% end %>
+    </div>
   </div>
-  <div class="mt-5">
-    <%= link_to dashboard_user_path, class: "clean-link color-indigodye" do %>
-      <h6>Accueil</h6>
-    <% end %>
-    <%= link_to dashboard_user_path, class: "clean-link color-indigodye" do %>
-      <h6>Nous Contacter</h6>
-    <% end %>
-  </div>
-</div>
+
+
+
+
+
+
+
+
+<% end %>
