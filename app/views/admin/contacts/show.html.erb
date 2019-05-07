@@ -1,0 +1,20 @@
+<div class="dashboard-admin d-flex">
+  <%= render 'admin/shared/sidenav' %>
+
+  <div class="dashboard-content col-sm-10 p-4 backgroundcolor-isabelline">
+    <h1>Message de <%= @contact.name %> </h1>
+      <div class="dashboard-admin-courses-index-active-classes mt-5 px-3 pt-3 backgroundcolor-white">
+        <div class="container">
+            <div class="row">
+              <h2>Nom et Prénom : <%= @contact.name %></h2>
+            </div>
+            <div class="row">
+              <h6>Sujet : <%= @contact.subject %></h6>
+            </div>
+            <div class="row">
+               <p>Message : <%= @contact.message %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
