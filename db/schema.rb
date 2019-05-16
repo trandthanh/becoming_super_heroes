@@ -163,9 +163,9 @@ ActiveRecord::Schema.define(version: 2019_05_07_164952) do
     t.string "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
+    t.boolean "admin", default: false, null: false
     t.float "latitude"
     t.float "longitude"
-    t.boolean "admin"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["mentee_id"], name: "index_users_on_mentee_id"
